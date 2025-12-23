@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initAccountTabs();
     initCopyButtons();
+    initAddressCopy();
 });
 
 /**
@@ -173,6 +174,39 @@ function smoothScrollTo(target) {
         element.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
+        });
+    }
+}
+
+/**
+ * 주소 복사 기능
+ */
+function initAddressCopy() {
+    const addressBtn = document.querySelector('.copy-address-btn');
+
+    if (addressBtn) {
+        addressBtn.addEventListener('click', async () => {
+            const textToCopy = addressBtn.dataset.copy;
+
+            try {
+                await navigator.clipboard.writeText(textToCopy);
+                showToast('주소가 복사되었습니다');
+            } catch (err) {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = textToCopy;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-9999px';
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showToast('주소가 복사되었습니다');
+                } catch (e) {
+                    showToast('복사에 실패했습니다');
+                }
+                document.body.removeChild(textArea);
+            }
         });
     }
 }
