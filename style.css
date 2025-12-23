@@ -263,6 +263,14 @@ img {
     background-color: var(--color-bg-cream);
 }
 
+.invite-text {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    letter-spacing: 0.15em;
+    margin-bottom: 32px;
+}
+
 .greeting-icon {
     width: 60px;
     margin: 0 auto 24px;
