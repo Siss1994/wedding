@@ -214,15 +214,14 @@ img {
 }
 
 .scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    display: block;
+    margin-top: 24px;
     animation: fadeInUp 1s ease-out 1s both;
 }
 
 .scroll-indicator span {
+    display: block;
+    text-align: center;
     font-size: 0.8125rem;
     color: var(--color-text-light);
     letter-spacing: 0.1em;
