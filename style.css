@@ -214,7 +214,9 @@ img {
 }
 
 .scroll-indicator {
-    margin: 24px auto 0;
+    display: block;
+    width: 100%;
+    margin-top: 24px;
     text-align: center;
     animation: fadeInUp 1s ease-out 1s both;
 }
