@@ -210,3 +210,29 @@ function initAddressCopy() {
         });
     }
 }
+
+/**
+ * 라이트박스 열기
+ */
+function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    if (lightbox && lightboxImg) {
+        lightboxImg.src = imageSrc;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+/**
+ * 라이트박스 닫기
+ */
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+
+    if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}

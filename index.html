@@ -27,7 +27,8 @@
             </div>
             <p class="cover-venue">The BMK 컨벤션</p>
             <div class="couple-image">
-                <img src="images/couple-main.jpg" alt="신랑 신부">
+                <img src="images/메인.jpg" alt="신랑 신부">
+                <div class="image-gradient"></div>
             </div>
             <div class="scroll-indicator">
                 <span>초대합니다</span>
@@ -90,23 +91,32 @@
             <div class="section-content animate-on-scroll">
                 <h2 class="section-title">우리의 순간</h2>
                 <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="images/gallery-1.svg" alt="갤러리 사진 1">
+                    <div class="gallery-item" onclick="openLightbox('images/1.jpg')">
+                        <img src="images/1.jpg" alt="갤러리 사진 1">
                     </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery-2.svg" alt="갤러리 사진 2">
+                    <div class="gallery-item" onclick="openLightbox('images/2.jpg')">
+                        <img src="images/2.jpg" alt="갤러리 사진 2">
                     </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery-3.svg" alt="갤러리 사진 3">
+                    <div class="gallery-item" onclick="openLightbox('images/3.jpg')">
+                        <img src="images/3.jpg" alt="갤러리 사진 3">
                     </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery-4.svg" alt="갤러리 사진 4">
+                    <div class="gallery-item" onclick="openLightbox('images/4.jpg')">
+                        <img src="images/4.jpg" alt="갤러리 사진 4">
                     </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery-5.svg" alt="갤러리 사진 5">
+                    <div class="gallery-item" onclick="openLightbox('images/5.jpg')">
+                        <img src="images/5.jpg" alt="갤러리 사진 5">
                     </div>
-                    <div class="gallery-item">
-                        <img src="images/gallery-6.svg" alt="갤러리 사진 6">
+                    <div class="gallery-item" onclick="openLightbox('images/6.jpg')">
+                        <img src="images/6.jpg" alt="갤러리 사진 6">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('images/7.jpg')">
+                        <img src="images/7.jpg" alt="갤러리 사진 7">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('images/8.jpg')">
+                        <img src="images/8.jpg" alt="갤러리 사진 8">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('images/9.jpg')">
+                        <img src="images/9.jpg" alt="갤러리 사진 9">
                     </div>
                 </div>
             </div>
@@ -269,6 +279,11 @@
 
     <!-- 복사 알림 토스트 -->
     <div class="toast" id="toast">계좌번호가 복사되었습니다</div>
+
+    <!-- 라이트박스 -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img src="" alt="확대 이미지" id="lightbox-img">
+    </div>
 
     <script src="script.js"></script>
 </body>

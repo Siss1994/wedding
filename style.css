@@ -191,9 +191,7 @@ img {
     border-radius: 200px 200px 20px 20px;
     overflow: hidden;
     background: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
@@ -201,6 +199,16 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.couple-image .image-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 15%;
+    background: linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 100%);
+    pointer-events: none;
 }
 
 .scroll-indicator {
@@ -338,8 +346,8 @@ img {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
 }
 
 .gallery-item {
@@ -347,13 +355,15 @@ img {
     overflow: hidden;
     border-radius: 8px;
     background: linear-gradient(135deg, var(--color-bg-ivory) 0%, var(--color-primary-light) 100%);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .gallery-item:hover img {
@@ -907,4 +917,56 @@ img {
 .greeting-icon img[src*="placeholder"],
 .divider img[src*="placeholder"] {
     background: linear-gradient(135deg, var(--color-bg-ivory) 0%, var(--color-primary-light) 100%);
+}
+
+/* =====================================================
+   라이트박스 (이미지 확대)
+   ===================================================== */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.lightbox.active {
+    display: flex;
+    animation: lightboxFadeIn 0.3s ease;
+}
+
+@keyframes lightboxFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    animation: lightboxZoomIn 0.3s ease;
+}
+
+@keyframes lightboxZoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
