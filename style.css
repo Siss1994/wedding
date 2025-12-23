@@ -213,6 +213,7 @@ img {
 
 .scroll-indicator {
     position: relative;
+    width: 100%;
     margin-top: 24px;
     text-align: center;
     display: flex;
