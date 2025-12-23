@@ -212,10 +212,8 @@ img {
 }
 
 .scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin-top: 24px;
     text-align: center;
     animation: fadeInUp 1s ease-out 1s both;
 }
@@ -449,8 +447,12 @@ img {
     padding: 8px 0;
 }
 
-.calendar-days span:first-child {
-    color: var(--color-heart);
+.calendar-days span.sunday {
+    color: #e74c3c;
+}
+
+.calendar-days span.saturday {
+    color: #3498db;
 }
 
 .calendar-dates {
@@ -467,8 +469,12 @@ img {
     border-radius: 50%;
 }
 
-.calendar-dates span:nth-child(7n+1) {
-    color: var(--color-heart);
+.calendar-dates span.sunday {
+    color: #e74c3c;
+}
+
+.calendar-dates span.saturday {
+    color: #3498db;
 }
 
 .calendar-dates span.other-month {
@@ -626,6 +632,17 @@ img {
     margin-bottom: 12px;
     padding-bottom: 8px;
     border-bottom: 1px solid #eee;
+}
+
+.transport-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-medium);
+    line-height: 1.6;
+}
+
+.transport-desc strong {
+    color: var(--color-text-dark);
+    font-weight: 600;
 }
 
 /* 지하철 */
@@ -948,4 +965,60 @@ img {
         transform: scale(1);
         opacity: 1;
     }
+}
+
+.lightbox img {
+    transition: opacity 0.15s ease;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10001;
+    transition: background 0.2s ease;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover,
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-prev {
+    left: 16px;
+}
+
+.lightbox-next {
+    right: 16px;
 }

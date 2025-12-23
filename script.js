@@ -185,6 +185,18 @@ function initAddressCopy() {
 }
 
 /**
+ * 라이트박스 관련 변수
+ */
+const galleryImages = [
+    'images/1.jpg', 'images/2.jpg', 'images/3.jpg',
+    'images/4.jpg', 'images/5.jpg', 'images/6.jpg',
+    'images/7.jpg', 'images/8.jpg', 'images/9.jpg'
+];
+let currentImageIndex = 0;
+let touchStartX = 0;
+let touchEndX = 0;
+
+/**
  * 라이트박스 열기
  */
 function openLightbox(imageSrc) {
@@ -192,9 +204,16 @@ function openLightbox(imageSrc) {
     const lightboxImg = document.getElementById('lightbox-img');
 
     if (lightbox && lightboxImg) {
+        currentImageIndex = galleryImages.indexOf(imageSrc);
+        if (currentImageIndex === -1) currentImageIndex = 0;
+
         lightboxImg.src = imageSrc;
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
+
+        // 스와이프 이벤트 등록
+        lightbox.addEventListener('touchstart', handleTouchStart, { passive: true });
+        lightbox.addEventListener('touchend', handleTouchEnd, { passive: true });
     }
 }
 
@@ -207,5 +226,72 @@ function closeLightbox() {
     if (lightbox) {
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
+
+        // 스와이프 이벤트 제거
+        lightbox.removeEventListener('touchstart', handleTouchStart);
+        lightbox.removeEventListener('touchend', handleTouchEnd);
+    }
+}
+
+/**
+ * 이전 이미지
+ */
+function prevImage(event) {
+    if (event) event.stopPropagation();
+    currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+    updateLightboxImage();
+}
+
+/**
+ * 다음 이미지
+ */
+function nextImage(event) {
+    if (event) event.stopPropagation();
+    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+    updateLightboxImage();
+}
+
+/**
+ * 라이트박스 이미지 업데이트
+ */
+function updateLightboxImage() {
+    const lightboxImg = document.getElementById('lightbox-img');
+    if (lightboxImg) {
+        lightboxImg.style.opacity = '0';
+        setTimeout(() => {
+            lightboxImg.src = galleryImages[currentImageIndex];
+            lightboxImg.style.opacity = '1';
+        }, 150);
+    }
+}
+
+/**
+ * 터치 시작 핸들러
+ */
+function handleTouchStart(e) {
+    touchStartX = e.changedTouches[0].screenX;
+}
+
+/**
+ * 터치 종료 핸들러
+ */
+function handleTouchEnd(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+}
+
+/**
+ * 스와이프 처리
+ */
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            nextImage(); // 왼쪽으로 스와이프 -> 다음
+        } else {
+            prevImage(); // 오른쪽으로 스와이프 -> 이전
+        }
     }
 }

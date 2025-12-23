@@ -59,7 +59,7 @@
                 <div class="greeting-icon">
                     <img src="images/rings.svg" alt="웨딩 링">
                 </div>
-                <h2 class="section-title">우리 결혼합니다</h2>
+                <h2 class="section-title">저희 결혼합니다</h2>
                 <div class="greeting-text">
                     <p class="quote">
                         "우리 인생은 수많은 작은 순간으로 이루어져 있어요.<br>
@@ -158,14 +158,14 @@
                                 <span>2026년 2월</span>
                             </div>
                             <div class="calendar-days">
-                                <span>일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span>토</span>
+                                <span class="sunday">일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span class="saturday">토</span>
                             </div>
                             <div class="calendar-dates">
-                                <span class="other-month">1</span>
-                                <span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
-                                <span class="wedding-day">8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
-                                <span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
-                                <span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span>
+                                <span class="sunday">1</span>
+                                <span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span class="saturday">7</span>
+                                <span class="wedding-day sunday">8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span class="saturday">14</span>
+                                <span class="sunday">15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span class="saturday">21</span>
+                                <span class="sunday">22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span class="saturday">28</span>
                             </div>
                         </div>
                     </div>
@@ -244,6 +244,12 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- 자가용 -->
+                        <div class="transport-section">
+                            <p class="transport-title">🚗 자가용</p>
+                            <p class="transport-desc">네비게이션에 <strong>'TheBMK웨딩'</strong> 입력 후 주차장 이용</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -293,8 +299,11 @@
     <div class="toast" id="toast">계좌번호가 복사되었습니다</div>
 
     <!-- 라이트박스 -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-prev" onclick="prevImage(event)">&lt;</button>
         <img src="" alt="확대 이미지" id="lightbox-img">
+        <button class="lightbox-next" onclick="nextImage(event)">&gt;</button>
     </div>
 
     <script src="script.js"></script>
