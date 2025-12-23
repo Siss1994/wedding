@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120">
+  <defs>
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8b4b8"/>
+      <stop offset="100%" style="stop-color:#d4a5a5"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4a5a5"/>
+      <stop offset="100%" style="stop-color:#c49393"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8c4a2"/>
+      <stop offset="100%" style="stop-color:#8fb088"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 잎사귀들 -->
+  <ellipse cx="45" cy="75" rx="18" ry="8" fill="url(#leafGrad)" transform="rotate(-30 45 75)" opacity="0.8"/>
+  <ellipse cx="155" cy="75" rx="18" ry="8" fill="url(#leafGrad)" transform="rotate(30 155 75)" opacity="0.8"/>
+  <ellipse cx="35" cy="60" rx="15" ry="6" fill="url(#leafGrad)" transform="rotate(-45 35 60)" opacity="0.7"/>
+  <ellipse cx="165" cy="60" rx="15" ry="6" fill="url(#leafGrad)" transform="rotate(45 165 60)" opacity="0.7"/>
+
+  <!-- 작은 꽃들 -->
+  <circle cx="55" cy="45" r="8" fill="url(#pinkGrad)" opacity="0.9"/>
+  <circle cx="145" cy="45" r="8" fill="url(#pinkGrad)" opacity="0.9"/>
+  <circle cx="40" cy="55" r="6" fill="#e8c4c4" opacity="0.8"/>
+  <circle cx="160" cy="55" r="6" fill="#e8c4c4" opacity="0.8"/>
+
+  <!-- 메인 장미 (왼쪽) -->
+  <g transform="translate(70, 35)">
+    <circle cx="0" cy="0" r="18" fill="url(#roseGrad)"/>
+    <path d="M-8,-8 Q0,-15 8,-8 Q15,0 8,8 Q0,15 -8,8 Q-15,0 -8,-8" fill="url(#pinkGrad)" opacity="0.8"/>
+    <circle cx="0" cy="0" r="6" fill="#c49393" opacity="0.6"/>
+  </g>
+
+  <!-- 메인 장미 (중앙) -->
+  <g transform="translate(100, 30)">
+    <circle cx="0" cy="0" r="22" fill="url(#roseGrad)"/>
+    <path d="M-10,-10 Q0,-18 10,-10 Q18,0 10,10 Q0,18 -10,10 Q-18,0 -10,-10" fill="url(#pinkGrad)" opacity="0.8"/>
+    <circle cx="0" cy="0" r="8" fill="#c49393" opacity="0.6"/>
+  </g>
+
+  <!-- 메인 장미 (오른쪽) -->
+  <g transform="translate(130, 35)">
+    <circle cx="0" cy="0" r="18" fill="url(#roseGrad)"/>
+    <path d="M-8,-8 Q0,-15 8,-8 Q15,0 8,8 Q0,15 -8,8 Q-15,0 -8,-8" fill="url(#pinkGrad)" opacity="0.8"/>
+    <circle cx="0" cy="0" r="6" fill="#c49393" opacity="0.6"/>
+  </g>
+
+  <!-- 작은 꽃봉오리들 -->
+  <circle cx="75" cy="60" r="5" fill="#e8c4c4" opacity="0.7"/>
+  <circle cx="125" cy="60" r="5" fill="#e8c4c4" opacity="0.7"/>
+  <circle cx="100" cy="58" r="4" fill="#d4a5a5" opacity="0.6"/>
+
+  <!-- 하단 잎사귀 -->
+  <ellipse cx="80" cy="80" rx="12" ry="5" fill="url(#leafGrad)" transform="rotate(-15 80 80)" opacity="0.6"/>
+  <ellipse cx="120" cy="80" rx="12" ry="5" fill="url(#leafGrad)" transform="rotate(15 120 80)" opacity="0.6"/>
+</svg>

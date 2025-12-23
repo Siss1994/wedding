@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350">
+  <defs>
+    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5f5f5"/>
+      <stop offset="100%" style="stop-color:#eeeeee"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 배경 -->
+  <rect width="400" height="350" fill="#fafafa"/>
+
+  <!-- 메인 도로 (가로) -->
+  <rect x="0" y="140" width="400" height="50" fill="#e8e8e8"/>
+  <line x1="0" y1="165" x2="400" y2="165" stroke="#ffffff" stroke-width="2" stroke-dasharray="20,10"/>
+
+  <!-- 메인 도로 (세로 - 서대전네거리역) -->
+  <rect x="320" y="0" width="50" height="350" fill="#90c695"/>
+  <line x1="345" y1="0" x2="345" y2="350" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- 서대전네거리역 표시 -->
+  <g transform="translate(345, 165)">
+    <circle cx="0" cy="0" r="12" fill="white" stroke="#90c695" stroke-width="3"/>
+    <circle cx="0" cy="0" r="6" fill="#90c695"/>
+  </g>
+  <text x="360" y="60" font-family="sans-serif" font-size="11" fill="#4a4a4a" writing-mode="vertical-rl">서대전네거리역</text>
+
+  <!-- 서대전역 -->
+  <g transform="translate(80, 50)">
+    <rect x="-25" y="-15" width="50" height="30" rx="5" fill="#4a90d9" opacity="0.8"/>
+    <text x="0" y="5" text-anchor="middle" font-family="sans-serif" font-size="11" fill="white">서대전역</text>
+  </g>
+
+  <!-- The BMK 건물 -->
+  <g transform="translate(150, 100)">
+    <rect x="-40" y="-35" width="80" height="70" rx="5" fill="white" stroke="#d4a5a5" stroke-width="2"/>
+    <!-- 건물 아이콘 -->
+    <rect x="-25" y="-20" width="50" height="35" fill="#f5f0eb"/>
+    <rect x="-20" y="-15" width="12" height="10" fill="#d4a5a5" opacity="0.5"/>
+    <rect x="-5" y="-15" width="12" height="10" fill="#d4a5a5" opacity="0.5"/>
+    <rect x="10" y="-15" width="12" height="10" fill="#d4a5a5" opacity="0.5"/>
+    <rect x="-20" y="0" width="12" height="10" fill="#d4a5a5" opacity="0.5"/>
+    <rect x="-5" y="0" width="12" height="10" fill="#d4a5a5" opacity="0.5"/>
+    <rect x="10" y="0" width="12" height="10" fill="#d4a5a5" opacity="0.5"/>
+    <text x="0" y="50" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#4a3f3f" font-weight="bold">The BMK</text>
+  </g>
+
+  <!-- 주변 건물들 -->
+  <g transform="translate(80, 180)">
+    <rect x="-20" y="-10" width="40" height="20" rx="3" fill="#e8e8e8"/>
+    <text x="0" y="25" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#8c8c8c">삼익아파트</text>
+  </g>
+
+  <g transform="translate(150, 210)">
+    <rect x="-30" y="-10" width="60" height="20" rx="3" fill="#e8e8e8"/>
+    <text x="0" y="25" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#8c8c8c">한신휴플러스</text>
+  </g>
+
+  <g transform="translate(220, 180)">
+    <rect x="-20" y="-10" width="40" height="20" rx="3" fill="#e8e8e8"/>
+    <text x="0" y="25" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#8c8c8c">홈플러스</text>
+  </g>
+
+  <g transform="translate(280, 180)">
+    <rect x="-20" y="-10" width="40" height="20" rx="3" fill="#e8e8e8"/>
+    <text x="0" y="25" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#8c8c8c">SAY백화점</text>
+  </g>
+
+  <g transform="translate(150, 50)">
+    <rect x="-25" y="-10" width="50" height="20" rx="3" fill="#e8e8e8"/>
+    <text x="0" y="25" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#8c8c8c">오류동 누리보듬아파트</text>
+  </g>
+
+  <g transform="translate(250, 50)">
+    <rect x="-20" y="-10" width="40" height="20" rx="3" fill="#e8e8e8"/>
+    <text x="0" y="25" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#8c8c8c">삼성아파트</text>
+  </g>
+
+  <g transform="translate(250, 260)">
+    <rect x="-30" y="-10" width="60" height="20" rx="3" fill="#e8e8e8"/>
+    <text x="0" y="25" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#8c8c8c">문화마을1단지</text>
+  </g>
+
+  <g transform="translate(320, 260)">
+    <rect x="-30" y="-10" width="60" height="20" rx="3" fill="#e8e8e8"/>
+    <text x="0" y="25" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#8c8c8c">문화마을2단지</text>
+  </g>
+
+  <!-- 서대전공원 -->
+  <g transform="translate(345, 230)">
+    <ellipse cx="0" cy="0" rx="20" ry="15" fill="#a8d4a2" opacity="0.5"/>
+    <text x="0" y="25" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#6b8f68">서대전공원</text>
+  </g>
+
+  <!-- 하단 정보 박스 -->
+  <rect x="20" y="290" width="360" height="45" rx="20" fill="#d4a5a5"/>
+  <text x="200" y="312" text-anchor="middle" font-family="sans-serif" font-size="11" fill="white" font-weight="bold">ADD 대전광역시 중구 문화동 311-2</text>
+  <text x="200" y="328" text-anchor="middle" font-family="sans-serif" font-size="11" fill="white">Tel 042.334.1000</text>
+</svg>

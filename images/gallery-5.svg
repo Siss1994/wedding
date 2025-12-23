@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <defs>
+    <linearGradient id="g5" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf8f5"/>
+      <stop offset="100%" style="stop-color:#e8b4b8"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="300" fill="url(#g5)"/>
+  <circle cx="150" cy="120" r="50" fill="#c49393" opacity="0.3"/>
+  <rect x="100" y="180" width="100" height="60" rx="5" fill="#c49393" opacity="0.2"/>
+  <text x="150" y="260" text-anchor="middle" font-family="serif" font-size="14" fill="#8c7b7b">사진 5</text>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 380">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf7f4"/>
+      <stop offset="100%" style="stop-color:#e8c4c4"/>
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbe8db"/>
+      <stop offset="100%" style="stop-color:#f5dcc7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 배경 -->
+  <rect width="280" height="380" fill="url(#bgGrad)"/>
+
+  <!-- 장식 꽃들 (상단) -->
+  <circle cx="40" cy="30" r="12" fill="#e8b4b8" opacity="0.4"/>
+  <circle cx="240" cy="40" r="10" fill="#e8b4b8" opacity="0.3"/>
+  <circle cx="60" cy="50" r="8" fill="#d4a5a5" opacity="0.3"/>
+
+  <!-- 신랑 -->
+  <g transform="translate(95, 100)">
+    <!-- 다리 -->
+    <rect x="-15" y="130" width="14" height="60" fill="#4a4a4a"/>
+    <rect x="1" y="130" width="14" height="60" fill="#4a4a4a"/>
+    <!-- 몸 (정장) -->
+    <path d="M-30,50 L-35,130 L35,130 L30,50 Q0,60 -30,50" fill="#3d3d3d"/>
+    <!-- 셔츠 & 조끼 -->
+    <path d="M-15,50 L-15,90 L15,90 L15,50 Q0,58 -15,50" fill="white"/>
+    <!-- 넥타이/보타이 -->
+    <ellipse cx="0" cy="55" rx="8" ry="4" fill="#5a4a42"/>
+    <!-- 머리 -->
+    <ellipse cx="0" cy="25" rx="28" ry="32" fill="url(#skinGrad)"/>
+    <!-- 머리카락 -->
+    <path d="M-25,15 Q-28,-5 0,-10 Q28,-5 25,15 Q20,5 0,8 Q-20,5 -25,15" fill="#3d3528"/>
+    <!-- 눈 -->
+    <ellipse cx="-10" cy="22" rx="3" ry="2" fill="#3d3d3d"/>
+    <ellipse cx="10" cy="22" rx="3" ry="2" fill="#3d3d3d"/>
+    <!-- 미소 -->
+    <path d="M-8,35 Q0,42 8,35" stroke="#c49393" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- 신부 -->
+  <g transform="translate(185, 100)">
+    <!-- 드레스 -->
+    <path d="M-35,55 L-55,190 L55,190 L35,55 Q0,75 -35,55" fill="white"/>
+    <path d="M-35,55 L-55,190 L55,190 L35,55 Q0,75 -35,55" fill="none" stroke="#e8c4c4" stroke-width="1"/>
+    <!-- 드레스 디테일 -->
+    <path d="M-35,55 Q0,75 35,55" stroke="#f0d6d6" stroke-width="1" fill="none"/>
+    <path d="M-45,100 Q0,115 45,100" stroke="#f0d6d6" stroke-width="1" fill="none" opacity="0.5"/>
+    <!-- 어깨 -->
+    <ellipse cx="0" cy="50" rx="30" ry="12" fill="white"/>
+    <!-- 머리 -->
+    <ellipse cx="0" cy="22" rx="26" ry="30" fill="url(#skinGrad)"/>
+    <!-- 머리카락 -->
+    <path d="M-28,15 Q-30,-10 0,-15 Q30,-10 28,15 Q25,0 0,5 Q-25,0 -28,15" fill="#5a4032"/>
+    <ellipse cx="-30" cy="30" rx="5" ry="25" fill="#5a4032"/>
+    <ellipse cx="30" cy="30" rx="5" ry="25" fill="#5a4032"/>
+    <!-- 눈 -->
+    <ellipse cx="-8" cy="18" rx="3" ry="2" fill="#3d3d3d"/>
+    <ellipse cx="8" cy="18" rx="3" ry="2" fill="#3d3d3d"/>
+    <!-- 볼터치 -->
+    <ellipse cx="-15" cy="28" rx="5" ry="3" fill="#f0c4c4" opacity="0.5"/>
+    <ellipse cx="15" cy="28" rx="5" ry="3" fill="#f0c4c4" opacity="0.5"/>
+    <!-- 미소 -->
+    <path d="M-6,32 Q0,38 6,32" stroke="#c49393" stroke-width="2" fill="none"/>
+    <!-- 부케 -->
+    <g transform="translate(-15, 95)">
+      <ellipse cx="0" cy="8" rx="4" ry="12" fill="#8fb088"/>
+      <circle cx="0" cy="-5" r="12" fill="#e8b4b8"/>
+      <circle cx="-8" cy="-8" r="7" fill="#d4a5a5"/>
+      <circle cx="8" cy="-8" r="7" fill="#d4a5a5"/>
+      <circle cx="0" cy="2" r="6" fill="#c49393"/>
+    </g>
+  </g>
+
+  <!-- 하단 텍스트 -->
+  <rect x="60" y="310" width="160" height="50" rx="8" fill="white" opacity="0.7"/>
+  <text x="140" y="332" text-anchor="middle" font-family="serif" font-size="12" fill="#8c7b7b">
+    커플 사진을 넣어주세요
+  </text>
+  <text x="140" y="350" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a89999">
+    280 x 380 px
+  </text>
+</svg>
