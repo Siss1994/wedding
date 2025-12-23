@@ -764,9 +764,9 @@ img {
 .account-label {
     text-align: center;
     font-family: var(--font-serif);
-    font-size: 1rem;
+    font-size: 1.125rem;
     color: var(--color-primary);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-weight: 600;
 }
 
