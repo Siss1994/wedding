@@ -750,45 +750,24 @@ img {
     line-height: 1.8;
 }
 
-/* 탭 버튼 */
-.account-tabs {
+/* 계좌 리스트 (수직 레이아웃) */
+.account-list {
     display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 24px;
+    flex-direction: column;
+    gap: 24px;
 }
 
-.tab-btn {
-    padding: 12px 32px;
-    border: 1px solid var(--color-primary-light);
-    background-color: transparent;
-    color: var(--color-text-medium);
-    font-family: var(--font-serif);
-    font-size: 0.9375rem;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.tab-btn.active {
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-    color: white;
-}
-
-/* 계좌 패널 */
-.account-panel {
-    display: none;
-}
-
-.account-panel.active {
+.account-section {
     display: block;
-    animation: fadeIn 0.3s ease;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+.account-label {
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+    font-weight: 600;
 }
 
 .account-card {

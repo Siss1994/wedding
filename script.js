@@ -7,7 +7,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
-    initAccountTabs();
     initCopyButtons();
     initAddressCopy();
 });
@@ -90,32 +89,6 @@ function initScrollAnimations() {
     }
 }
 
-/**
- * 계좌 탭 전환 기능
- */
-function initAccountTabs() {
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const panels = document.querySelectorAll('.account-panel');
-
-    tabButtons.forEach((btn) => {
-        btn.addEventListener('click', () => {
-            const targetTab = btn.dataset.tab;
-
-            // 모든 버튼에서 active 제거
-            tabButtons.forEach((b) => b.classList.remove('active'));
-            // 클릭된 버튼에 active 추가
-            btn.classList.add('active');
-
-            // 모든 패널 숨기기
-            panels.forEach((panel) => panel.classList.remove('active'));
-            // 해당 패널 보이기
-            const targetPanel = document.getElementById(`${targetTab}-account`);
-            if (targetPanel) {
-                targetPanel.classList.add('active');
-            }
-        });
-    });
-}
 
 /**
  * 계좌번호 복사 기능
