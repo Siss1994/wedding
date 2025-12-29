@@ -806,6 +806,11 @@ img {
     padding: 28px 24px;
     text-align: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    margin-bottom: 12px;
+}
+
+.account-card:last-child {
+    margin-bottom: 0;
 }
 
 .account-card .bank-name {
